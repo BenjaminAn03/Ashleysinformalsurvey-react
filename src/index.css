@@ -1,6 +1,7 @@
 body {
   background-image: url(https://images7.alphacoders.com/132/1324265.jpeg);
-  background-size: cover;
+  background-size: contain;
+  background-position: center; 
   background-attachment: fixed;
   color: white;
   margin: 0;
@@ -30,13 +31,14 @@ p {
 
 form {
   width: 75%;
-  max-width: 600px; /* Max width to fit larger screens */
+  max-width: 600px;
   margin: auto;
   font-size: 20px;
   background-color: rgba(0,0,0,.3);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 fieldset {
@@ -45,6 +47,9 @@ fieldset {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  padding: .5em;
+  margin: 0;
+  box-sizing: border-box; 
 }
 
 input[type="text"], input[inputmode="decimal"] {
@@ -53,10 +58,11 @@ input[type="text"], input[inputmode="decimal"] {
   color: white;
   height: 28px;
   font-size: 18px;
-  padding-left: .3em;
+  padding-left: 0.3em;
   border: none;
   border-radius: 5px;
   outline: none;
+  box-sizing: border-box; 
 }
 
 input[type="submit"] {
@@ -70,6 +76,7 @@ input[type="submit"] {
   background-color: #6bafe0;
   color: white;
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 input[type="submit"]:hover {
@@ -85,14 +92,14 @@ input[type="submit"]:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 .radio-group label {
   display: flex;
   align-items: center;
   margin-right: 20px;
-  flex: 1 1 45%; /* Each label will take up approximately 45% of the row */
+  flex: 1 1 45%;
   margin-bottom: 0.5em;
 }
 
